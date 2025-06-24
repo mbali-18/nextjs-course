@@ -1,8 +1,16 @@
+import Link from "next/link";
 function HomePage() {
   return (
     <div>
       <h1>Welcome to My Home Page</h1>
-      <p>This is the main content of the home page.</p>
+      <ul>
+        <li>
+          <Link href="/portfolio">Portfolio</Link>
+        </li>
+        <li>
+          <Link href="/clients">Clients</Link>
+        </li>
+      </ul>
     </div>
   );
 }
