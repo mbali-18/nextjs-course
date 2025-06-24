@@ -1,8 +1,20 @@
+import Link from "next/link";
+
 function ClientsPage() {
+  const clients = [
+    { id: "mbali", name: "Mbali" },
+    { id: "mbuso", name: "Mbuso" },
+  ];
   return (
     <div>
       <h1>Clients Page</h1>
-      <p>This is the clients page content.</p>
+      <ul>
+        {clients.map((client) => (
+          <li key={client.id}>
+            <Link href={`/clients/${client.id}`}>{client.name}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
